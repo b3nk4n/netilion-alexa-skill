@@ -1,0 +1,187 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "e und h netilion",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "NetilionLevelIntent",
+                    "slots": [
+                        {
+                            "name": "tag",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "{tag}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "Füllstand",
+                        "nach dem Füllstand",
+                        "nach dem Füllstand von {tag}",
+                        "Wie ist der Füllstand",
+                        "Was ist der Füllstand",
+                        "Was ist der Füllstand von meinem Tag {tag}",
+                        "Wie ist der Füllstand von meinem Tag {tag}",
+                        "Füllstand von meinem Täg {tag}",
+                        "Füllstand von {tag}",
+                        "Wie ist der Füllstand von {tag}",
+                        "Was ist der Füllstand von {tag}"
+                    ]
+                },
+                {
+                    "name": "NetilionTemperatureIndent",
+                    "slots": [
+                        {
+                            "name": "tag",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "{tag}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "Temperatur",
+                        "nach der Temperatur",
+                        "nach der Temperatur von {tag}",
+                        "Wie ist die Temperatur",
+                        "Was ist die Temperatur",
+                        "Was ist die Temperatur von meinem Tag {tag}",
+                        "Wie ist die Temperatur von meinem Tag {tag}",
+                        "Temperatur von meinem Tag {tag}",
+                        "Temperatur von {tag}",
+                        "Wie ist die Temperatur von {tag}",
+                        "Was ist die Temperatur von {tag}"
+                    ]
+                },
+                {
+                    "name": "NetilionDistanceIntent",
+                    "slots": [
+                        {
+                            "name": "tag",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "{tag}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "Distanz",
+                        "nach der Distanz",
+                        "nach der Distanz von {tag}",
+                        "Wie ist die Distanz",
+                        "Was ist die Distanz",
+                        "Was ist die Distanz von meinem Täg {tag}",
+                        "Wie ist die Distanz von meinem Täg {tag}",
+                        "Distanz von meinem Täg {tag}",
+                        "Distanz von {tag}",
+                        "Wie ist die Distanz von {tag}",
+                        "Was ist die Distanz von {tag}"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "NetilionLevelIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "tag",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1393468313428.153518051803"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "NetilionTemperatureIndent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "tag",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1548002239010.1303726656871"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "NetilionDistanceIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "tag",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.750108765262.1278540209961"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1393468313428.153518051803",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Für welchen Tag?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1548002239010.1303726656871",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Für welchen Tag?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.750108765262.1278540209961",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Für welchen Tag?"
+                    }
+                ]
+            }
+        ]
+    }
+}

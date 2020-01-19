@@ -1,0 +1,212 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "net ilion",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "NetilionLevelIntent",
+                    "slots": [
+                        {
+                            "name": "tag",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "For the tag {tag}",
+                                "The tag {tag}",
+                                "{tag}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "tell me the level",
+                        "what's the level",
+                        "what is the level",
+                        "level",
+                        "what's the level of {tag}",
+                        "what's the level of my tag {tag}",
+                        "what's the level of the tag {tag}",
+                        "level of my tag {tag}",
+                        "level of tag {tag}",
+                        "what is the level of the tag {tag}",
+                        "tell me the level of the tag {tag}",
+                        "tell me the level of my tag {tag}",
+                        "tell me the level of {tag}",
+                        "level of {tag}",
+                        "what is the level of {tag}",
+                        "what is the level of my tag {tag}",
+                        "for the level",
+                        "for the level of {tag}",
+                        "for the level of the {tag}",
+                        "for the level of my tag {tag}"
+                    ]
+                },
+                {
+                    "name": "NetilionTemperatureIntent",
+                    "slots": [
+                        {
+                            "name": "tag",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "The tag {tag}",
+                                "For the tag {tag}",
+                                "{tag}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "tell me the temperature",
+                        "what's the temperature",
+                        "what is the temperature",
+                        "temperature",
+                        "what is the temperature of my tag {tag}",
+                        "what is the temperature of {tag}",
+                        "temperature of {tag}",
+                        "tell me the temperature of {tag}",
+                        "tell me the temperature of my tag {tag}",
+                        "tell me the temperature of the tag {tag}",
+                        "what is the temperature of the tag {tag}",
+                        "temperature of tag {tag}",
+                        "for the temperature",
+                        "for the temperature of {tag}",
+                        "for the temperature of the {tag}",
+                        "for the temperature of my tag {tag}"
+                    ]
+                },
+                {
+                    "name": "NetilionDistanceIntent",
+                    "slots": [
+                        {
+                            "name": "tag",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "{tag}",
+                                "For the tag {tag}",
+                                "The tag {tag}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "tell me the distance",
+                        "what's the distance",
+                        "what is the distance",
+                        "distance",
+                        "what's the distance of {tag}",
+                        "what's the distance of my tag {tag}",
+                        "what's the distance of the tag {tag}",
+                        "distance of my tag {tag}",
+                        "distance of tag {tag}",
+                        "what is the distance of the tag {tag}",
+                        "tell me the distance of the tag {tag}",
+                        "tell me the distance of my tag {tag}",
+                        "tell me the distance of {tag}",
+                        "distance of {tag}",
+                        "what is the distance of {tag}",
+                        "what is the distance of my tag {tag}",
+                        "for the distance",
+                        "for the distance of {tag}",
+                        "for the distance of the {tag}",
+                        "for the distance of my tag {tag}"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "NetilionLevelIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "tag",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1413848479133.1248318779956"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "NetilionTemperatureIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "tag",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.250563658965.509561843011"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "NetilionDistanceIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "tag",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.129219928473.909101632538"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1413848479133.1248318779956",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "For which tag?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.250563658965.509561843011",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "For which tag?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.129219928473.909101632538",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "For which tag?"
+                    }
+                ]
+            }
+        ]
+    }
+}
